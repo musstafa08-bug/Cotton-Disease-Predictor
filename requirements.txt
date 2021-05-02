@@ -48,7 +48,6 @@ Keras-Preprocessing==1.1.2
 lightgbm==2.2.3
 llvmlite==0.34.0
 locket==0.2.1
-MarkupSafe==1.1.1
 mkl-fft==1.3.0
 mkl-random==1.1.1
 mkl-service==2.3.0
