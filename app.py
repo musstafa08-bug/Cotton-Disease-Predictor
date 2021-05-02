@@ -17,15 +17,11 @@ from tensorflow.keras.preprocessing import image
 from flask import Flask, redirect, url_for, request, render_template
 from werkzeug.utils import secure_filename
 
-# from gevent.pywsgi import WSGIServer
 
-# Define a flask app
 app = Flask(__name__)
 
-# Model saved with Keras model.save()
 MODEL_PATH = 'D:\projects\CottonDisease\model\model_inception.h5'
 
-# Load your trained model
 model = load_model(MODEL_PATH)
 
 
@@ -35,14 +31,9 @@ def model_predict(img_path, model):
 
     # Preprocessing the image
     x = image.img_to_array(img)
-    # x = np.true_divide(x, 255)
-    ## Scaling
+    
     x = x / 255
     x = np.expand_dims(x, axis=0)
-
-    # Be careful how your trained model deals with the input
-    # otherwise, it won't make correct prediction!
-    # x = preprocess_input(x)
 
     preds = model.predict(x)
     preds = np.argmax(preds, axis=1)
@@ -60,14 +51,12 @@ def model_predict(img_path, model):
 
 @app.route('/', methods=['GET'])
 def index():
-    # Main page
     return render_template('index.html')
 
 
 @app.route('/predict', methods=['GET', 'POST'])
 def upload():
     if request.method == 'POST':
-        # Get the file from post request
         f = request.files['file']
 
         # Save the file to ./uploads
@@ -76,7 +65,7 @@ def upload():
             basepath, 'uploads', secure_filename(f.filename))
         f.save(file_path)
 
-        # Make prediction
+        # Prediction
         preds = model_predict(file_path, model)
         result = preds
         return result
