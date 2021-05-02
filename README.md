@@ -1,2 +1,2 @@
 # Cotton-Disease-Predictor
-![Cotton Disease](Cotton Disease Prediction.gif)
+![alt text](https://github.com/musstafa08-bug/Cotton-Disease-Predictor/blob/master/CottonDisease.gif)
