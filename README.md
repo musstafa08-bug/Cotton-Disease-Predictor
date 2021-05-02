@@ -1,2 +1,3 @@
 # Cotton-Disease-Predictor
-![alt text](https://github.com/musstafa08-bug/Cotton-Disease-Predictor/blob/master/CottonDisease.gif)
+![Alt Text](https://github.com/musstafa08-bug/Cotton-Disease-Predictor/blob/main/CottonDisease.gif)
+
