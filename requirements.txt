@@ -30,7 +30,6 @@ Flask-Cors==3.0.8
 flatbuffers==1.12
 future==0.16.0
 gast==0.3.3
-GDAL==2.2.2
 geojson==2.5.0
 google-pasta==0.2.0
 grpcio==1.29.0
